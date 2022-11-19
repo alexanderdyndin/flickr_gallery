@@ -6,6 +6,6 @@ import kotlin.math.roundToInt
 fun getPagingConfig(pageSize: Int) = PagingConfig(
     pageSize = pageSize,
     prefetchDistance = (pageSize * 0.75).roundToInt(),
-    enablePlaceholders = true,
+    enablePlaceholders = false,
     initialLoadSize = (pageSize * 1.5).roundToInt(),
 )

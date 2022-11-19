@@ -12,6 +12,10 @@
         android:layout_height="48dp"
         app:title="@string/interesting"/>
 
+    <include
+        android:id="@+id/header"
+        layout="@layout/footer_lyaout"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_photo"
         android:layout_width="match_parent"

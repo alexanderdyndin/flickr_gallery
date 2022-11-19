@@ -44,12 +44,8 @@ class PhotoFragment: Fragment(R.layout.fragment_photo) {
             .allowHardware(true)
             .data(url)
             .error(R.drawable.ic_launcher_background)
+            .placeholder(org.koin.android.R.color.material_blue_grey_800)
             .target(binding.image)
-            .listener(object : ImageRequest.Listener {
-                override fun onError(request: ImageRequest, result: ErrorResult) {
-                    binding.image.hide()
-                }
-            })
             .build()
             .let(requireContext().imageLoader::enqueue)
     }
